@@ -1,0 +1,39 @@
+# -*- lexical-binding: t -*-
+#+title Literate Emacs Configuration
+#+author: Roie R. Black
+#email: roie.black@gmail.com
+#+date: 2025-08-11
+
+* Testing the Configuration
+
+Unfortunately, actually testing the entire configuration defined in this file is beyond what can be done at this time. Instead, I will simply do some operational testing using GitHub/Actions. Here is the test file:
+
+** GitHub Actions
+:properties:
+:custom_id: github-actions
+:end:
+#+begin_src shell :tangle .github/workflows/main.yml :mkdirp yes
+name: testing literate emacs configuration
+on:
+    push:
+        branches: [ main ]
+        workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: set up emacs
+              uses: purcell/setup-emacs@v3.0
+              with:
+                  version: 30.1
+            - name: check linux environment
+              run: |
+                  pwd
+                  ls
+#+end_src
+
+
+
