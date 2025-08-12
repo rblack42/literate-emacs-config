@@ -6,22 +6,22 @@ jobs:
   linux_x86:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
-    - name: Setup Emacs
-      uses: ./
-      with:
-        version: 30.1
-    - name: Check emacs version
-      run: emacs --version
+      - uses: actions/checkout@v5
+      - name: Setup Emacs
+        uses: ./
+        with:
+          version: 30.1
+      - name: Check emacs version
+        run: emacs --version
 
   macos_arm:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v5
-    - name: Setup Emacs
-      uses: ./
-      with:
-        version: 30.1
-    - name: Check emacs version
-      run: emacs --version
+      - uses: actions/checkout@v5
+      - name: Setup Emacs
+        uses: ./
+        with:
+          version: 30.1
+      - name: Check emacs version
+        run: emacs --version
 
