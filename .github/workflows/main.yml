@@ -1,22 +1,27 @@
-name: testing literate emacs configuration
+name: "CI"
 on:
-    push:
-        branches: [ main ]
-        workflow_dispatch:
+	push
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
+	linux_x86:
+		runs-on: ubuntu-latest
+		steps:
+		- uses: actions/checkout@v4
+		- name: Setup Emacs
+		  uses: ./
+   		  with:
+			version: 30.1
+		- name: Check emacs version
+		  run: emacs --version
 
-            - name: set up emacs
-              uses: purcell/setup-emacs@master
-              with:
-                  version: 30.1
-
-            - name: check linux environment
-              run: |
-                  pwd
-                  ls
+	macos_arm:
+		runs-on: macos-latest
+		steps:
+		- uses: actions/checkout@v4
+		- name: Setup Emacs
+		  uses: ./
+   		  with:
+			version: 30.1
+		- name: Check emacs version
+		  run: emacs --version
 
