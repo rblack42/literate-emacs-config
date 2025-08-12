@@ -1,27 +1,27 @@
 name: "CI"
 on:
-    push:
+  push:
 
 jobs:
-	linux_x86:
-		runs-on: ubuntu-latest
-		steps:
-		- uses: actions/checkout@v4
-		- name: Setup Emacs
-		  uses: ./
-   		  with:
-			version: 30.1
-		- name: Check emacs version
-		  run: emacs --version
+  linux_x86:
+    runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v4
+      - name: Setup Emacs
+        uses: ./
+        with:
+          version: 30.1
+      - name: Check emacs version
+        run: emacs --version
 
-	macos_arm:
-		runs-on: macos-latest
-		steps:
-		- uses: actions/checkout@v4
-		- name: Setup Emacs
-		  uses: ./
-   		  with:
-			version: 30.1
-		- name: Check emacs version
-		  run: emacs --version
+  macos_arm:
+    runs-on: macos-latest
+      steps:
+      - uses: actions/checkout@v4
+      - name: Setup Emacs
+        uses: ./
+          with:
+            version: 30.1
+      - name: Check emacs version
+        run: emacs --version
 
