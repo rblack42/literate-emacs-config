@@ -6,7 +6,7 @@ jobs:
   linux_x86:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Setup Emacs
       uses: ./
       with:
@@ -17,7 +17,7 @@ jobs:
   macos_arm:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Setup Emacs
       uses: ./
       with:
