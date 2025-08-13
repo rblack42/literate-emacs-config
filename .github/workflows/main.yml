@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
     - name: Setup Emacs
-      uses: ./
+      uses: purcell/setup-emacs@master
       with:
         version: ${{ matrix.emacs_version }}
     - name: Check emacs version
@@ -32,8 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
     - name: Setup Emacs
-      uses: ./
-      with:
+      uses: purcell/setup-emacs@master
         version: ${{ matrix.emacs_version }}
     - name: Check emacs version
       run: emacs --version
