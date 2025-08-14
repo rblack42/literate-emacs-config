@@ -1,0 +1,10 @@
+# -*- lexical-binding: t -*-
+#+title: Elisp Testing
+#+date: 2025-08-13
+
+** References:
+
+- [[ERT][https://www.gnu.org/software/emacs/manual/html_mono/ert.html]]
+- [[Elisp Testing Quickstart][https://scripter.co/quick-intro-to-emacs-lisp-regression-testing/]]
+- [[coverate-testing][https://www.gnu.org/software/emacs/manual/html_node/elisp/Coverage-Testing.html]]
+- [[test-cockpit][https://github.com/johannes-mueller/test-cockpit.el]]
