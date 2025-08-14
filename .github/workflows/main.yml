@@ -22,7 +22,7 @@ jobs:
       with:
         version: ${{ matrix.emacs_version }}
     - name: Check emacs version
-      run: emacs --version
+      run: make
 
   macos_arm:
     runs-on: macos-latest
@@ -36,4 +36,4 @@ jobs:
       with:
         version: ${{ matrix.emacs_version }}
     - name: Check emacs version
-      run: emacs --version
+      run: make
